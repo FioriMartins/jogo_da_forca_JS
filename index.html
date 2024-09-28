@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Forca</title>
+    <style>
+        body {
+            display: flex;
+
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 60px;
+
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .texto {
+            border: 1px solid red;
+            letter-spacing: 15px;
+        }
+
+
+        .botaos {
+            display: flex;
+            gap: 10px;
+        }
+
+        .button {
+            border: 1px solid black;
+
+            width: 50px;
+            text-align: center;
+            font-size: 40px;
+        }
+
+        .button:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="texto"></div>
+    <div class="botaos"></div>
+    <script src="index.js"></script>
+</body>
+</html>
