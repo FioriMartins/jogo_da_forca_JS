@@ -1,33 +1,48 @@
 body {
     display: flex;
-    background-color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 60px;
-
+    gap: 100px;
     align-items: center;
     flex-direction: column;
+
+    margin: 50px 0px;
+
+    background-color: #02033e;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 60px;
 }
 
 .texto {
-    border: 1px solid red;
+    color: white;
     letter-spacing: 15px;
 }
 
 .botaos {
     display: flex;
-    gap: 10px;
+    justify-content: center;
+    gap: 15px;
     flex-wrap: wrap;
+    width: 50%;
 }
 
-.button {
-    border: 1px solid black;
+#button {
+    border: 1px solid #00002e;
+    background-color: #00002e;
+    color: white;
+    border-radius: 5px;
 
-    width: 50px;
+    width: 70px;
     text-align: center;
-    font-size: 40px;
+    font-size: 60px;
+
+    transition: transform 200ms;
+    transition: background-color 100ms;
 }
 
-.button:hover {
+#button:hover {
+    color: white;
+    background-color: black;
+
     transform: scale(1.1);
 }
 
@@ -43,7 +58,41 @@ body {
 }
 
 .morto {
-    transition: filter 1s;
+    transition: all 1s;
 
     filter: grayscale(1);
+    opacity: 0.1;
+}
+
+.charada {
+    font-size: 40px;
+    font-family: monospace;
+    color: white;
+    text-align: center;
+
+    width: 75%;
+}
+
+@media (max-width: 400px) {
+    body {
+        gap: 50px;
+    }
+
+    .charada {
+        font-size: 20px;
+    }
+
+    .vida img{
+        width: 50px;
+    }
+
+    .botaos {
+        margin: 20% 0 0 0;
+        width: 90%;
+    }
+
+    #button {
+        width: 40px;
+        font-size: 25px;
+    }
 }
