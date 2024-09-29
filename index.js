@@ -41,7 +41,7 @@ var vidasGastas = 4
 document.addEventListener('DOMContentLoaded', palavraTratamento())
 
 alfabeto.forEach((letra) => {
-    document.querySelector('.botaos').innerHTML += `<div id="button" name="${letra}" onclick="letra('${letra}')">${letra}</div>`
+    document.querySelector('.botaos').innerHTML += `<input type="button" id="button" name="${letra}" onclick="letra('${letra}')" value="${letra}">`
 })
 
 for (let i = 1; i <= 3; i++) {
@@ -75,17 +75,26 @@ function letra(letter) {
 
     document.querySelector('.texto').innerHTML = arrayPalavra.join('')
 
-    ganhou()
+    setTimeout(() => {ganhou ()}, 1500)
 }
 
 function ganhou() {
     if (arrayPalavra.join('') == palavraEscolhida) {
-        alert('ganhou, vagabunda')
+        alert('GANHOU!!!')
         location.reload(true)
+        return false
     }
 
     if (vidasGastas == 1) {
-        alert('perdeu mamon')
+        alert('PERDEU!!')
         location.reload(true)
+        return false
     }
+}
+
+document.onkeyup=function(e){
+    var e = e || window.event; 
+    var letter = e.key
+
+    letra (letter.toUpperCase())
 }
