@@ -60,10 +60,10 @@ const palavras = [
         "resposta": "PASSARO",
         "desc": "Eu posso voar pelo céu e cantar, mas não sou um avião. O que sou?"
     },
-    {
-        "resposta": "ARCO-ÍRIS",
-        "desc": "Eu sou colorido e apareço depois da chuva, mas não sou uma pintura. O que sou?"
-    },
+    // {
+    //     "resposta": "ARCO-ÍRIS",
+    //     "desc": "Eu sou colorido e apareço depois da chuva, mas não sou uma pintura. O que sou?"
+    // },  ERRO A SER CORRIGIDO
     {
         "resposta": "CARTÃO",
         "desc": "Eu sou pequeno e faço parte do seu bolso, mas não sou dinheiro. O que sou?"
